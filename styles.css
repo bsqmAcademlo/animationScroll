@@ -23,6 +23,11 @@ section {
     flex-direction: column;
 }
 
+.home {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
 .works {
     margin-top: 3rem;
     display: grid;
@@ -58,10 +63,31 @@ section {
 
 /* transiciones */
 
-.hidden {
+.hidden-l {
     opacity: 0;
     filter: blur(5px);
     transform: translateX(-100%);
+    transition: opacity 1s, filter 1s, transform 1s;
+}
+
+.hidden-r {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(100%);
+    transition: opacity 1s, filter 1s, transform 1s;
+}
+
+.hidden-t {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(-100%);
+    transition: opacity 1s, filter 1s, transform 1s;
+}
+
+.hidden-b {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(100%);
     transition: opacity 1s, filter 1s, transform 1s;
 }
 
@@ -69,6 +95,7 @@ section {
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
+    transform: translateY(0);
 }
 
 @media (prefers-reduced-motion) {
